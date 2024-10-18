@@ -10,28 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Fstore
 {
     /// <summary>
-    /// Interaction logic for MemberDetailsWindow.xaml
+    /// Interaction logic for TicketDetailWindow.xaml
     /// </summary>
-    public partial class MemberDetailsWindow : Window
+    public partial class TicketDetailWindow : Page
     {
-        public MemberDetailsWindow()
+        public TicketDetailWindow()
         {
             InitializeComponent();
-        }
-
-        private void btnCancel_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnAdd_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

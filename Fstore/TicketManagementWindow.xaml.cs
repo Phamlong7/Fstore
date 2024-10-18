@@ -16,13 +16,18 @@ using System.Windows.Shapes;
 namespace Fstore
 {
     /// <summary>
-    /// Interaction logic for RegisterWindow.xaml
+    /// Interaction logic for TicketManagementWindow.xaml
     /// </summary>
-    public partial class RegisterWindow : Page
+    public partial class TicketManagementWindow : Page
     {
-        public RegisterWindow()
+        public TicketManagementWindow()
         {
             InitializeComponent();
+        }
+
+        private void ticketDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

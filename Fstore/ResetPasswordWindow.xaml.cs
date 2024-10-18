@@ -1,28 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace Fstore
 {
-    /// <summary>
-    /// Interaction logic for ResetPasswordWindow.xaml
-    /// </summary>
-    public partial class ResetPasswordWindow : Page
+    public partial class ResetPasswordWindow : Window
     {
         public ResetPasswordWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            // Logic for resetting the password
+            string password = txtPassword.Password;
+            string rePassword = txtRePassword.Password;
+
+            if (password != rePassword)
+            {
+                MessageBox.Show("Passwords do not match. Please try again.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Perform the reset password operation...
+            MessageBox.Show("Password has been successfully reset.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            this.Close();
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close(); // Close the window
         }
     }
 }

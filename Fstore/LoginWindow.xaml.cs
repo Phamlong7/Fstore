@@ -91,5 +91,10 @@ namespace Fstore
                 return false;
             }
         }
+
+        private void CloseWindow_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

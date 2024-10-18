@@ -99,6 +99,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddTicketForUserWindow.xaml.cs">
+      <DependentUpon>AddTicketForUserWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -106,35 +109,33 @@
     <Compile Include="ForgotPasswordWindow.xaml.cs">
       <DependentUpon>ForgotPasswordWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MemberActivityLogWindow.xaml.cs">
-      <DependentUpon>MemberActivityLogWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="RegisterWindow.xaml.cs">
       <DependentUpon>RegisterWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ResetPasswordWindow.xaml.cs">
       <DependentUpon>ResetPasswordWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UpdateMemberDetailsWindow.xaml.cs">
-      <DependentUpon>UpdateMemberDetailsWindow.xaml</DependentUpon>
+    <Compile Include="TicketDetailWindow.xaml.cs">
+      <DependentUpon>TicketDetailWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TicketManagementWindow.xaml.cs">
+      <DependentUpon>TicketManagementWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTicketWindow.xaml.cs">
+      <DependentUpon>UpdateTicketWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserTicketHistory.xaml.cs">
+      <DependentUpon>UserTicketHistory.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AddTicketForUserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ForgotPasswordWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="LoginWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MemberActivityLogWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MemberDetailsWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MemberManagementWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -146,7 +147,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UpdateMemberDetailsWindow.xaml">
+    <Page Include="TicketDetailWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TicketManagementWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateTicketWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserTicketHistory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -154,12 +167,6 @@
   <ItemGroup>
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MemberDetailsWindow.xaml.cs">
-      <DependentUpon>MemberDetailsWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MemberManagementWindow.xaml.cs">
-      <DependentUpon>MemberManagementWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

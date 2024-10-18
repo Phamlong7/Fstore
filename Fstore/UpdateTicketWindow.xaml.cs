@@ -16,13 +16,18 @@ using System.Windows.Shapes;
 namespace Fstore
 {
     /// <summary>
-    /// Interaction logic for MemberActivityLogWindow.xaml
+    /// Interaction logic for UpdateTicketWindow.xaml
     /// </summary>
-    public partial class MemberActivityLogWindow : Page
+    public partial class UpdateTicketWindow : Page
     {
-        public MemberActivityLogWindow()
+        public UpdateTicketWindow()
         {
             InitializeComponent();
+        }
+
+        private void txtCurrentStatus_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

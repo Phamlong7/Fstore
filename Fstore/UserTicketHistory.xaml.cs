@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Fstore
 {
     /// <summary>
-    /// Interaction logic for UpdateMemberDetailsWindow.xaml
+    /// Interaction logic for UserTicketHistory.xaml
     /// </summary>
-    public partial class UpdateMemberDetailsWindow : Page
+    public partial class UserTicketHistory : Page
     {
-        public UpdateMemberDetailsWindow()
+        public UserTicketHistory()
         {
             InitializeComponent();
         }

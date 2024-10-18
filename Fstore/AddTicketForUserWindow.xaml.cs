@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Fstore
 {
     /// <summary>
-    /// Interaction logic for RegisterWindow.xaml
+    /// Interaction logic for AddTicketForUserWindow.xaml
     /// </summary>
-    public partial class RegisterWindow : Page
+    public partial class AddTicketForUserWindow : Page
     {
-        public RegisterWindow()
+        public AddTicketForUserWindow()
         {
             InitializeComponent();
         }
