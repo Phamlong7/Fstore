@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Fstore
 {
     /// <summary>
-    /// Interaction logic for Register.xaml
+    /// Interaction logic for ResetPasswordWindow.xaml
     /// </summary>
-    public partial class RegisterWindow : Page
+    public partial class ResetPasswordWindow : Page
     {
-        public RegisterWindow()
+        public ResetPasswordWindow()
         {
             InitializeComponent();
         }

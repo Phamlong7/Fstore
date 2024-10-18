@@ -1,16 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Fstore
 {
@@ -19,6 +9,10 @@ namespace Fstore
     /// </summary>
     public partial class LoginWindow : Window
     {
+        // Dummy credentials for validation. Replace with actual user data retrieval logic
+        private readonly string storedEmail = "admin@example.com";
+        private readonly string storedPassword = "password123"; // In a real-world scenario, you'd hash the password
+
         public LoginWindow()
         {
             InitializeComponent();
@@ -26,15 +20,76 @@ namespace Fstore
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            MemberManagementWindow memberManagement = new MemberManagementWindow();
-            memberManagement.Show();
+            string enteredEmail = txtEmail.Text.Trim();
+            string enteredPassword = txtPassword.Password;
+
+            // Basic validation: Check if fields are filled
+            if (string.IsNullOrEmpty(enteredEmail) || string.IsNullOrEmpty(enteredPassword))
+            {
+                MessageBox.Show("Please enter both email and password.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Check email format (basic check)
+            if (!IsValidEmail(enteredEmail))
+            {
+                MessageBox.Show("Please enter a valid email address.", "Invalid Email", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            // Validate user credentials (in real application, you would validate against a database or API)
+            if (enteredEmail == storedEmail && enteredPassword == storedPassword)
+            {
+                // If login is successful, open the MemberManagementWindow
+                MemberManagementWindow memberManagement = new MemberManagementWindow();
+                memberManagement.ShowDialog();
+
+                // Close the login window
+                this.Close();
+            }
+            else
+            {
+                // If login fails
+                MessageBox.Show("Invalid email or password. Please try again.", "Login Failed", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
+            // Close the login window
             this.Close();
         }
+
+        // Existing code...
+
+        private void Register_Click(object sender, MouseButtonEventArgs e)
+        {
+            // Logic to navigate to the registration window
+            RegisterWindow registerWindow = new RegisterWindow();
+            registerWindow.ShowDialog();
+            this.Close();
+        }
+
+        private void ForgotPassword_Click(object sender, MouseButtonEventArgs e)
+        {
+            // Logic to navigate to the Forgot Password window
+            ForgotPasswordWindow forgotPasswordWindow = new ForgotPasswordWindow();
+            forgotPasswordWindow.ShowDialog();
+            this.Close();
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            // Basic email format check (this can be more advanced depending on your needs)
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
-
-
 }
